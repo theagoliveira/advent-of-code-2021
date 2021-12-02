@@ -31,8 +31,17 @@ class Answer {
         return Arrays.stream(data.split("\n")).map(Integer::valueOf).collect(Collectors.toList());
     }
 
+    public int solution() {
+        String[] data = readInputFile().split("\n");
+        int result = 0;
+
+        // CODE
+
+        return result;
+    }
+
     public static void main(String[] args) {
-        String rawInput = readInputFile();
+        System.out.println(new Answer().solution());
     }
 
 }

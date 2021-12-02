@@ -1,21 +1,18 @@
 # frozen_string_literal: true
 
 class Answer
-  class << self
-    def read_input_file
-      File.read('./input.txt')
-    end
+  def self.read_input_file
+    File.read('input.txt')
+  end
 
-    def split_data(data, char)
-      data.split(char)
-    end
+  def main
+    data = self.class.read_input_file.split("\n")
+    result = 0
 
-    def split_and_convert_to_int(data, char)
-      data.split(char).map(&:to_i)
-    end
+    # CODE
 
-    def main
-      raw_input = read_input_file
-    end
+    result
   end
 end
+
+puts Answer.new.main
