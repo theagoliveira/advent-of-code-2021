@@ -1,14 +1,20 @@
 # frozen_string_literal: true
 
-input_file = File.open('./input.txt')
-raw_input = input_file.read
-input_file.close
-input_array = raw_input.split("\n").map(&:to_i)
+class Answer
+  def self.read_input_file
+    File.read('input.txt')
+  end
 
-result = 0
+  def main
+    data = self.class.read_input_file.split("\n").map(&:to_i)
+    result = 0
 
-(1...input_array.size).each do |index|
-  result += 1 if input_array[index] > input_array[index - 1]
+    (1...data.size).each do |index|
+      result += 1 if data[index] > data[index - 1]
+    end
+
+    result
+  end
 end
 
-puts result
+puts Answer.new.main
