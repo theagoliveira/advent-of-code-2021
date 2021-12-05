@@ -7,8 +7,9 @@ class AnswerTest < Minitest::Test
   EXAMPLE = ''
 
   def test_main
+    # skip
     Answer.stub(:read_input_file, EXAMPLE) do
-      assert_equal Answer.new.main, 0
+      assert_equal 0, Answer.new.main
     end
   end
 end

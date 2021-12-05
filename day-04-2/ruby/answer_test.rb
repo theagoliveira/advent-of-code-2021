@@ -56,6 +56,7 @@ class AnswerTest < Minitest::Test
                           %w[1 12 X 15 19]].freeze
 
   def test_get_boards
+    skip
     data = EXAMPLE.dup.split("\n")
     data.shift(2)
 
@@ -63,6 +64,7 @@ class AnswerTest < Minitest::Test
   end
 
   def test_mark_board
+    skip
     board = BOARDS[0].dup
     Answer.new.mark_board(board, '22')
 
@@ -70,18 +72,22 @@ class AnswerTest < Minitest::Test
   end
 
   def test_check_false
+    skip
     assert_equal false, Answer.new.check(MARKED_BOARD)
   end
 
   def test_check_true_row
+    skip
     assert_equal true, Answer.new.check(WINNING_BOARD_ROW)
   end
 
   def test_check_true_column
+    skip
     assert_equal true, Answer.new.check(WINNING_BOARD_COLUMN)
   end
 
   def test_main
+    # skip
     Answer.stub(:read_input_file, EXAMPLE) do
       assert_equal 1924, Answer.new.main
     end

@@ -9,11 +9,11 @@ class AnswerTest < Minitest::Test
             "forward 8\n" \
             "up 3\n"      \
             "down 8\n"    \
-            "forward 2"
+            'forward 2'
 
   def test_main
     Answer.stub(:read_input_file, EXAMPLE) do
-      assert_equal Answer.new.main, 900
+      assert_equal 900, Answer.new.main
     end
   end
 end

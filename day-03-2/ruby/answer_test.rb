@@ -19,7 +19,7 @@ class AnswerTest < Minitest::Test
 
   def test_main
     Answer.stub(:read_input_file, EXAMPLE) do
-      assert_equal Answer.new.main, 230
+      assert_equal 230, Answer.new.main
     end
   end
 end
