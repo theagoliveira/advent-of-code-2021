@@ -5,6 +5,12 @@ require_relative 'answer'
 
 class AnswerTest < Minitest::Test
   EXAMPLE = ''
+  PARSED_EXAMPLE = ''
+
+  def test_parse_input
+    skip
+    assert_equal PARSED_EXAMPLE, Answer.new.parse_input(EXAMPLE)
+  end
 
   def test_main
     # skip

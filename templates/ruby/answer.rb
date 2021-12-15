@@ -5,8 +5,12 @@ class Answer
     File.read('input.txt')
   end
 
+  def parse_input(input)
+    input.split("\n")
+  end
+
   def main
-    data = self.class.read_input_file.split("\n")
+    data = parse_input(self.class.read_input_file)
     result = 0
 
     # CODE
